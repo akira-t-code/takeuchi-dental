@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>竹内歯科医院｜蟹江町の歯医者・予防歯科・小児歯科</title>
+<meta name="description" content="愛知県海部郡蟹江町の竹内歯科医院。開業30年、予防歯科を中心に小さなお子さまからご高齢の方まで。保育士による無料託児、訪問診療にも対応しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf9f5;
+  --surface:#ffffff;
+  --tint:#eef6f3;
+  --ink:#24332f;
+  --muted:#5f6f6a;
+  --line:#dde6e2;
+  --main:#2f8f7f;
+  --main-dark:#1f6e61;
+  --accent:#e98a5f;
+  --accent-soft:#fdf0e8;
+  --radius:18px;
+  --shadow:0 6px 24px rgba(36,51,47,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85;font-size:16px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--main-dark)}
+h1,h2,h3{font-family:"Zen Maru Gothic",sans-serif;line-height:1.4;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.tag-kari{display:inline-block;font-size:11px;font-weight:700;background:#fff3c4;color:#7a5b00;border:1px dashed #d9b300;border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle;line-height:1.7}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,249,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--main);display:grid;place-items:center}
+.logo b{font-family:"Zen Maru Gothic";font-size:20px;letter-spacing:.06em}
+.logo small{display:block;font-size:11px;color:var(--muted);letter-spacing:.1em;line-height:1}
+nav.gnav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav.gnav a{text-decoration:none;color:var(--ink);font-size:14px;font-weight:500}
+nav.gnav a:hover{color:var(--main)}
+.tel-btn{display:inline-flex;align-items:center;gap:8px;background:var(--main);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 18px;font-size:15px;white-space:nowrap}
+.tel-btn:hover{background:var(--main-dark)}
+.menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 72px}
+.hero::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:var(--tint)}
+.hero::after{content:"";position:absolute;left:-80px;bottom:-140px;width:300px;height:300px;border-radius:50%;background:var(--accent-soft)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;color:var(--main-dark);background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(30px,4.6vw,48px);letter-spacing:.04em}
+.hero h1 em{font-style:normal;color:var(--main)}
+.hero p.lead{font-size:17px;color:var(--muted);margin:18px 0 28px}
+.hero-points{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.hero-points li{background:#fff;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500;box-shadow:var(--shadow)}
+.hero-points li::before{content:"✓ ";color:var(--main);font-weight:700}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 26px;text-decoration:none;font-weight:700}
+.btn-main{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(233,138,95,.35)}
+.btn-main:hover{filter:brightness(.95)}
+.btn-sub{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.photo{border-radius:28px;background:linear-gradient(135deg,#d7ebe5,#f6e3d6);aspect-ratio:4/3.4;display:grid;place-items:center;color:#5f6f6a;font-size:14px;text-align:center;position:relative;box-shadow:var(--shadow)}
+.photo span{background:rgba(255,255,255,.75);padding:6px 14px;border-radius:999px}
+.hours-card{position:absolute;left:-28px;bottom:-24px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);font-size:13px;line-height:1.6;text-align:left}
+.hours-card b{font-size:15px;color:var(--main-dark)}
+
+/* notice */
+.notice{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 24px;display:flex;gap:20px;align-items:flex-start;margin-top:-28px;position:relative;z-index:2}
+.notice h2{font-size:16px;white-space:nowrap;color:var(--main-dark)}
+.notice ul{list-style:none;margin:0;padding:0;font-size:14px;flex:1}
+.notice li{display:flex;gap:14px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.notice li:last-child{border:0}
+.notice time{color:var(--muted);white-space:nowrap}
+
+/* sections */
+section{padding:88px 0}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head small{display:block;color:var(--main);font-weight:700;letter-spacing:.2em;font-size:12px;margin-bottom:6px}
+.sec-head h2{font-size:clamp(24px,3.2vw,32px)}
+.sec-head p{color:var(--muted);margin:12px auto 0;max-width:640px}
+.bg-tint{background:var(--tint)}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{background:var(--surface);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow)}
+.feature .num{font-family:"Zen Maru Gothic";color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.1em}
+.feature h3{font-size:19px;margin:6px 0 10px}
+.feature p{margin:0;color:var(--muted);font-size:15px}
+.ic{width:52px;height:52px;border-radius:14px;background:var(--tint);display:grid;place-items:center;margin-bottom:14px}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;transition:.2s}
+.service:hover{border-color:var(--main);transform:translateY(-2px)}
+.service h3{font-size:18px;display:flex;align-items:center;gap:8px}
+.service h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--main)}
+.service p{font-size:14.5px;color:var(--muted);margin:8px 0 0}
+.service details{margin-top:10px;font-size:14px}
+.service summary{cursor:pointer;color:var(--main-dark);font-weight:700}
+.service .word{background:var(--accent-soft);border-radius:10px;padding:8px 12px;margin-top:10px;font-size:13.5px}
+.service .word b{color:#b5532a}
+
+.doctors{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.doctor{display:grid;grid-template-columns:140px 1fr;gap:20px;background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.doctor .photo{aspect-ratio:3/4;border-radius:16px;font-size:12px}
+.doctor .role{color:var(--main);font-weight:700;font-size:13px}
+.doctor h3{font-size:22px;margin:2px 0 10px}
+.doctor ul{margin:0;padding-left:1.1em;font-size:14px;color:var(--muted)}
+.greeting{max-width:760px;margin:0 auto 40px;background:#fff;border-radius:var(--radius);padding:32px 36px;box-shadow:var(--shadow)}
+.greeting h3{font-size:22px;color:var(--main-dark);margin-bottom:12px}
+.greeting p{margin:0 0 12px}
+.greeting .sign{text-align:right;color:var(--muted)}
+
+.first-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--line)}
+.box h3{font-size:19px;margin-bottom:14px}
+.flow{list-style:none;padding:0;margin:0;counter-reset:f}
+.flow li{position:relative;padding:0 0 16px 46px;counter-increment:f}
+.flow li::before{content:counter(f);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--main);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Zen Maru Gothic"}
+.flow li b{display:block}
+.flow li span{font-size:14px;color:var(--muted)}
+.check{list-style:none;padding:0;margin:0}
+.check li{padding:6px 0 6px 28px;position:relative;border-bottom:1px dashed var(--line)}
+.check li::before{content:"✓";position:absolute;left:4px;color:var(--main);font-weight:700}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+
+.kids{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;background:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow)}
+.kids h2{font-size:clamp(22px,3vw,28px);margin-bottom:12px}
+.kids .badge{display:inline-block;background:var(--accent);color:#fff;font-weight:700;border-radius:8px;padding:2px 10px;font-size:13px;margin-bottom:10px}
+
+.facility{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.facility div{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.facility .photo{border-radius:0;aspect-ratio:4/3;box-shadow:none;font-size:12px}
+.facility p{margin:0;padding:12px 14px;font-size:14px}
+.facility p b{display:block;font-size:15px}
+
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+table.hours{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:15px}
+table.hours th,table.hours td{padding:12px 6px;text-align:center;border-bottom:1px solid var(--line)}
+table.hours thead th{background:var(--main);color:#fff;font-weight:500}
+table.hours tbody th{text-align:left;padding-left:14px;font-weight:500;white-space:nowrap}
+table.hours .o{color:var(--main);font-weight:700}
+table.hours .x{color:#b9c2bf}
+table.hours .t{color:var(--accent);font-weight:700}
+.info dl{display:grid;grid-template-columns:96px 1fr;gap:10px 12px;margin:20px 0 0;font-size:15px}
+.info dt{font-weight:700;color:var(--main-dark)}
+.info dd{margin:0}
+.map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#e7ecea;aspect-ratio:4/3.2}
+.map iframe{width:100%;height:100%;border:0;display:block}
+
+.recruit{display:flex;justify-content:space-between;align-items:center;gap:24px;background:linear-gradient(120deg,var(--main),#3aa592);color:#fff;border-radius:28px;padding:36px 40px}
+.recruit h2{font-size:24px}
+.recruit p{margin:6px 0 0;opacity:.9}
+.recruit a{background:#fff;color:var(--main-dark)}
+
+footer{background:#22312d;color:#cfd9d5;padding:48px 0 110px;font-size:14px}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#fff}
+footer .copy{margin-top:28px;font-size:12px;opacity:.7}
+
+/* mobile bottom bar */
+.sp-bar{display:none}
+
+@media (max-width:900px){
+  nav.gnav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px 20px}
+  nav.gnav.open{display:block}
+  nav.gnav ul{flex-direction:column;gap:0}
+  nav.gnav a{display:block;padding:12px 4px;border-bottom:1px solid var(--line);font-size:16px}
+  .menu-toggle{display:block}
+  .hd .tel-btn{display:none}
+  .hero{padding:36px 0 64px}
+  .hero-grid,.access-grid,.first-grid,.doctors,.kids{grid-template-columns:1fr}
+  .hero-grid .photo{order:-1}
+  .hours-card{left:12px;bottom:12px}
+  .features,.services{grid-template-columns:1fr 1fr}
+  .facility{grid-template-columns:1fr 1fr}
+  .notice{flex-direction:column;gap:8px;margin-top:-20px}
+  section{padding:64px 0}
+  .recruit{flex-direction:column;align-items:flex-start;padding:28px}
+  .sp-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+  .sp-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-decoration:none;font-weight:700;font-size:14px}
+  .sp-bar a:first-child{background:var(--accent);color:#fff}
+  .sp-bar a:last-child{background:#fff;color:var(--main-dark)}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .features,.services,.facility{grid-template-columns:1fr}
+  .doctor{grid-template-columns:96px 1fr;padding:18px;gap:14px}
+  .greeting{padding:24px 20px}
+  .kids{padding:24px 20px}
+  table.hours{font-size:13px}
+  table.hours th,table.hours td{padding:10px 2px}
+  table.hours tbody th{padding-left:8px}
+  .info dl{grid-template-columns:80px 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="竹内歯科医院 トップへ">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 3.5c-1.6-1-3.5-1.5-5.2-1-2.6.8-3.8 3.6-3.2 6.4.4 2 1.3 3.4 1.6 5.6.3 2.4.6 6.5 2.6 6.5 1.8 0 1.8-3.6 2.4-5.4.3-.9.9-1.4 1.8-1.4s1.5.5 1.8 1.4c.6 1.8.6 5.4 2.4 5.4 2 0 2.3-4.1 2.6-6.5.3-2.2 1.2-3.6 1.6-5.6.6-2.8-.6-5.6-3.2-6.4-1.7-.5-3.6 0-5.2 1z"/></svg>
+      </span>
+      <span><small>KANIE / TAKEUCHI DENTAL</small><b>竹内歯科医院</b></span>
+    </a>
+    <nav class="gnav" id="gnav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="#feature">当院の特徴</a></li>
+        <li><a href="#service">診療案内</a></li>
+        <li><a href="#doctor">院長紹介</a></li>
+        <li><a href="#first">初めての方へ</a></li>
+        <li><a href="#access">診療時間・アクセス</a></li>
+        <li><a href="#recruit">採用情報</a></li>
+      </ul>
+    </nav>
+    <a class="tel-btn" href="tel:0567960085">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      0567-96-0085
+    </a>
+    <button class="menu-toggle" id="menuBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">蟹江町で開業30年の歯科医院</span>
+      <h1>あなたが<em>通い続けたい</em><br>歯医者さんへ。</h1>
+      <p class="lead">小さなお子さまからご高齢の方まで、ご家族みんなのお口の健康を。<br>「自分の歯で一生おいしく食べる」を、予防から一緒に守ります。</p>
+      <ul class="hero-points">
+        <li>担当衛生士制の予防歯科</li>
+        <li>保育士による無料託児</li>
+        <li>訪問診療に対応</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-main" href="tel:0567960085">お電話でご予約</a>
+        <a class="btn btn-sub" href="#access">診療時間・アクセス</a>
+      </div>
+    </div>
+    <div class="photo">
+      <span>医院外観・院内の写真</span>
+      <div class="hours-card">
+        <b>本日の診療</b><span class="tag-kari">仮</span><br>
+        <span id="todayHours">9:00〜12:30／14:30〜19:00</span><br>
+        <span style="color:var(--muted)">休診：木・日・祝</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- お知らせ -->
+<div class="wrap">
+  <div class="notice">
+    <h2>お知らせ</h2>
+    <ul>
+      <li><time>2026.10.20</time><span>ホームページをリニューアルしました。</span><span class="tag-kari">例</span></li>
+      <li><time>2026.10.01</time><span>年末年始の休診日：12月29日〜1月5日</span><span class="tag-kari">例</span></li>
+      <li><time>2026.09.15</time><span>マイナ保険証をご利用いただけます。</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 特徴 -->
+<section id="feature">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>FEATURES</small>
+      <h2>竹内歯科医院の特徴</h2>
+      <p>「痛くない・怖くない・嫌いにならない」歯科医院をめざして、患者さまの立場に立った診療を心がけています。</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
+        <span class="num">POINT 01</span>
+        <h3>予防を大切にする歯科医院</h3>
+        <p>定期的なメンテナンスは健康長寿の秘訣。国家資格をもつ歯科衛生士が担当制で、歯みがきのコツや歯ブラシ選びまでお伝えします。</p>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 1.8 3.5 1.8 3.5-1.8 3.5-1.8M9 9.5h.01M15 9.5h.01"/></svg></div>
+        <span class="num">POINT 02</span>
+        <h3>痛みに配慮した治療</h3>
+        <p>表面麻酔や電動麻酔器を使い、できるだけ痛みを抑えた治療をご提案。お子さまには無理をせず、まずは医院の雰囲気に慣れてもらうところから始めます。</p>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="num">POINT 03</span>
+        <h3>徹底した衛生管理</h3>
+        <p>コップ・エプロン・グローブは患者さまごとに交換。器具は高圧蒸気滅菌器で滅菌し、滅菌パックで個別に管理しています。</p>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.2 1-4 3-4s3 1.8 3 4"/></svg></div>
+        <span class="num">POINT 04</span>
+        <h3>保育士による無料託児</h3>
+        <p>小さなお子さま連れでも安心。治療中は専任の保育士がお子さまをお預かりします（完全予約制）。</p>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <span class="num">POINT 05</span>
+        <h3>ご自宅への訪問診療</h3>
+        <p>通院が難しい方のご自宅へ伺い、入れ歯の調整や口腔ケアを行います。対応エリアは蟹江町内全域です。</p>
+      </div>
+      <div class="feature">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f8f7f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span class="num">POINT 06</span>
+        <h3>CTなどの設備</h3>
+        <p>歯科用CT・レントゲン・口腔内スキャナーを備え、お口の状態を詳しく確認したうえで、分かりやすくご説明します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 診療案内 -->
+<section id="service" class="bg-tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>MEDICAL</small>
+      <h2>診療案内</h2>
+      <p>むし歯・歯周病の治療から、予防、入れ歯、お子さまの歯並びまで幅広く対応しています。</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <h3>一般歯科</h3>
+        <p>むし歯・歯周病の治療。生活習慣も含めてお話しし、歯周病と全身の病気との関わりもご説明します。</p>
+      </div>
+      <div class="service">
+        <h3>小児歯科</h3>
+        <p>フッ素塗布や定期検診、歯並びのご相談。嫌がるお子さまに無理な治療はしません。</p>
+      </div>
+      <div class="service">
+        <h3>予防歯科</h3>
+        <p>担当の歯科衛生士による定期メンテナンス。むし歯や歯周病を「治す」前に「防ぐ」ことを大切にしています。</p>
+      </div>
+      <div class="service">
+        <h3>予防矯正</h3>
+        <p>乳歯の時期からあごの成長を促し、歯がきれいに並ぶスペースをつくる矯正です。食育のご相談も。</p>
+        <div class="word"><b>ことば解説：</b>ワイヤーではなく、取り外しできる装置（床矯正）を使う方法です。</div>
+      </div>
+      <div class="service">
+        <h3>メタルフリー</h3>
+        <p>古い銀歯を、金属を使わない白い詰め物に置き換えます。即日での修復も可能です。</p>
+        <div class="word"><b>ことば解説：</b>お口の中に金属を使わない治療のこと。見た目が自然で、金属アレルギーが心配な方にも。</div>
+      </div>
+      <div class="service">
+        <h3>ホワイトニング</h3>
+        <p>医院で行うホワイトニングと、ご自宅で行うホームホワイトニングをご用意しています。</p>
+      </div>
+      <div class="service">
+        <h3>入れ歯</h3>
+        <p>保険の入れ歯から、薄くて丈夫な金属床の入れ歯まで。「噛むこと」をあきらめないでください。</p>
+      </div>
+      <div class="service">
+        <h3>インプラント</h3>
+        <p>あごの骨に人工の歯根を埋め込み、歯を補う治療です。適切なメンテナンスで長くお使いいただけます。</p>
+      </div>
+      <div class="service">
+        <h3>訪問診療</h3>
+        <p>通院が困難な方のご自宅へ伺います。入れ歯の調整や口腔ケアなど。蟹江町内全域に対応。</p>
+      </div>
+    </div>
+    <p class="note" style="text-align:center">※自費診療の内容・費用・リスクについては、診療前に詳しくご説明します。<span class="tag-kari">料金表ページを追加予定</span></p>
+  </div>
+</section>
+
+<!-- 院長紹介 -->
+<section id="doctor">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>DOCTOR</small>
+      <h2>ごあいさつ・院長紹介</h2>
+    </div>
+    <div class="greeting">
+      <h3>「自分の歯で、一生おいしく食事を」</h3>
+      <p>蟹江町で開業して約30年。これまで多くの患者さまと向き合う中で、歯を「治す」だけでなく「守る」ことの大切さを実感してきました。お口の健康は、全身の健康につながります。</p>
+      <p>当院では歯科衛生士と連携し、予防を中心とした診療に取り組んでいます。痛くない・怖くない・嫌いにならない、そして「通い続けたい」と思っていただける歯科医院であり続けたいと考えています。</p>
+      <p class="sign">院長　竹内 章<span class="tag-kari">文章は仮</span></p>
+    </div>
+    <div class="doctors">
+      <div class="doctor">
+        <div class="photo"><span>院長写真</span></div>
+        <div>
+          <span class="role">院長</span>
+          <h3>竹内 章</h3>
+          <ul>
+            <li>愛知学院大学 歯学部 卒業</li>
+            <li>奈良県立医科大学 口腔外科学 勤務</li>
+            <li>愛知県内の歯科医院に勤務</li>
+            <li>蟹江町にて竹内歯科医院を開業</li>
+          </ul>
+        </div>
+      </div>
+      <div class="doctor">
+        <div class="photo"><span>副院長写真</span></div>
+        <div>
+          <span class="role">副院長</span>
+          <h3>竹内 啓太</h3>
+          <ul>
+            <li>愛知学院大学 歯学部 卒業</li>
+            <li>愛知学院大学 研修課程 修了</li>
+            <li>医療法人 もみの木歯科 勤務</li>
+            <li>竹内歯科医院 勤務</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 託児 -->
+<section class="bg-tint" style="padding:64px 0">
+  <div class="wrap">
+    <div class="kids">
+      <div class="photo"><span>キッズスペース・託児の写真</span></div>
+      <div>
+        <span class="badge">無料・完全予約制</span>
+        <h2>お子さま連れでも、<br>ご自身の治療に集中できます。</h2>
+        <p>「子どもがいるから歯医者に行けない」というお母さん・お父さんのために、保育士による無料の託児サービスをご用意しています。治療中は専任の保育士がお子さまをお預かりします。</p>
+        <p class="note">ご利用の際は、事前にお電話でご予約ください。対象年齢・受付曜日は<span class="tag-kari">要確認</span></p>
+        <a class="btn btn-main" href="tel:0567960085" style="margin-top:8px">託児を予約する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 初めての方へ -->
+<section id="first">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>FIRST VISIT</small>
+      <h2>初めての方へ</h2>
+      <p>ご予約から治療までの流れと、ご来院時にお持ちいただくものをご案内します。</p>
+    </div>
+    <div class="first-grid">
+      <div class="box">
+        <h3>ご来院の流れ</h3>
+        <ol class="flow">
+          <li><b>お電話でご予約</b><span>0567-96-0085 までお電話ください。痛みがある場合もお気軽に。</span></li>
+          <li><b>受付・問診票のご記入</b><span>気になること、ご希望をお聞かせください。</span></li>
+          <li><b>検査・カウンセリング</b><span>CT・レントゲン等で確認し、画像を見ながらご説明します。</span></li>
+          <li><b>治療・メンテナンス</b><span>ご納得いただいてから治療を始めます。治療後は定期検診へ。</span></li>
+        </ol>
+      </div>
+      <div class="box">
+        <h3>お持ちいただくもの</h3>
+        <ul class="check">
+          <li>マイナ保険証</li>
+          <li>お薬手帳（お持ちの方）</li>
+          <li>受給者証（お持ちの方）</li>
+          <li>紹介状（お持ちの方）</li>
+        </ul>
+        <p class="note">マイナ保険証をお持ちでない方は、資格確認書または有効期限内の健康保険証をお持ちください。いずれもない場合は自費診療となります。マイナ保険証をご利用の場合、限度額認定証は不要です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 院内設備 -->
+<section class="bg-tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>FACILITY</small>
+      <h2>院内・設備紹介</h2>
+    </div>
+    <div class="facility">
+      <div><div class="photo"><span>外観</span></div><p><b>外観・駐車場</b>医院の表と裏に駐車場があります。</p></div>
+      <div><div class="photo"><span>スロープ</span></div><p><b>バリアフリー</b>玄関にスロープを設けています。</p></div>
+      <div><div class="photo"><span>CT</span></div><p><b>歯科用CT</b>骨の状態まで立体的に確認できます。</p></div>
+      <div><div class="photo"><span>滅菌器</span></div><p><b>高圧蒸気滅菌器</b>器具を一つずつ滅菌管理しています。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 診療時間・アクセス -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head">
+      <small>HOURS &amp; ACCESS</small>
+      <h2>診療時間・アクセス</h2>
+    </div>
+    <div class="access-grid">
+      <div class="info">
+        <table class="hours">
+          <thead><tr><th scope="col">診療時間<span class="tag-kari" style="background:#fff">仮</span></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">9:00〜12:30</th><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="x">／</td><td class="o">●</td><td class="o">●</td><td class="x">／</td></tr>
+            <tr><th scope="row">14:30〜19:00</th><td class="o">●</td><td class="o">●</td><td class="o">●</td><td class="x">／</td><td class="o">●</td><td class="t">▲</td><td class="x">／</td></tr>
+          </tbody>
+        </table>
+        <p class="note">▲土曜午後は18:00まで　休診日：木曜・日曜・祝日</p>
+        <dl>
+          <dt>住所</dt><dd>〒497-0034<br>愛知県海部郡蟹江町本町4-12<br>（ヨシヅヤ蟹江専門店館 向かい）</dd>
+          <dt>電話</dt><dd><a href="tel:0567960085">0567-96-0085</a></dd>
+          <dt>駐車場</dt><dd>あり（医院の表・裏）<span class="tag-kari">台数を記入</span></dd>
+          <dt>電車</dt><dd>近鉄・JR 蟹江駅より<span class="tag-kari">所要時間を記入</span></dd>
+        </dl>
+      </div>
+      <div class="map">
+        <iframe title="竹内歯科医院の地図" loading="lazy" src="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E6%B5%B7%E9%83%A8%E9%83%A1%E8%9F%B9%E6%B1%9F%E7%94%BA%E6%9C%AC%E7%94%BA4-12&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 採用 -->
+<section id="recruit" style="padding-top:0">
+  <div class="wrap">
+    <div class="recruit">
+      <div>
+        <h2>歯科衛生士を募集しています</h2>
+        <p>常勤・パートともに募集中。土日祝休み・年間休日120日。見学・面接は随時受け付けています。</p>
+      </div>
+      <a class="btn" href="tel:0567960085">採用について問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <b style="font-size:18px;color:#fff;font-family:'Zen Maru Gothic'">竹内歯科医院</b><br>
+        〒497-0034 愛知県海部郡蟹江町本町4-12<br>
+        TEL <a href="tel:0567960085">0567-96-0085</a>
+      </div>
+      <div>
+        一般歯科／小児歯科／予防歯科／予防矯正／メタルフリー<br>
+        ホワイトニング／入れ歯／インプラント／訪問診療<br>
+        <a href="#">Instagram</a>　<a href="#">施設基準のお知らせ（PDF）</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="yr">2026</span> 竹内歯科医院</p>
+  </div>
+</footer>
+
+<div class="sp-bar">
+  <a href="tel:0567960085">📞 電話で予約</a>
+  <a href="#access">🕘 診療時間・地図</a>
+</div>
+
+<script>
+const btn=document.getElementById('menuBtn'),nav=document.getElementById('gnav');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+document.getElementById('yr').textContent=new Date().getFullYear();
+// 本日の診療（仮の時間で表示）
+const d=new Date().getDay(),t=document.getElementById('todayHours');
+if(d===0||d===4)t.textContent='本日は休診日です';
+else if(d===6)t.textContent='9:00〜12:30／14:30〜18:00';
+</script>
+</body>
+</html>
