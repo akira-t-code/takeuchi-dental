@@ -1,0 +1,3 @@
+src-pages/
+photos/*.png
+!photos/logo.png
