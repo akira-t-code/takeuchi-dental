@@ -8,38 +8,41 @@
 <meta name="description" content="愛知県海部郡蟹江町の竹内歯科医院。開業38年、予防歯科を中心に小さなお子さまからご高齢の方まで。保育士による無料託児、訪問診療にも対応しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Josefin+Sans:wght@400;600&family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+/* 配色：クリーム地・茶色の文字・オレンジのアクセント（あたたかい雰囲気） */
 :root{
-  --bg:#f8fafb;
+  --bg:#fffdf8;
   --surface:#ffffff;
-  --tint:#eaf5fc;
-  --ink:#22313b;
-  --muted:#5e6d77;
-  --line:#dde7ee;
-  --main:#0b8fd6;
-  --main-dark:#0a6aa1;
-  --accent:#ec8466;
-  --accent-soft:#fdf0ea;
+  --tint:#fcf6ea;
+  --ink:#5a3a1c;
+  --muted:#8a6d52;
+  --line:#efe3cf;
+  --main:#e8730a;
+  --main-dark:#b85c00;
+  --accent:#e8730a;
+  --accent-soft:#fff3ea;
+  --leaf:#7fbe25;
+  --brown:#6c441c;
   --radius:18px;
-  --shadow:0 6px 24px rgba(34,49,59,.08);
+  --shadow:0 6px 24px rgba(108,68,28,.08);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85;font-size:16px;-webkit-text-size-adjust:100%}
 img{max-width:100%;display:block}
 a{color:var(--main-dark)}
-h1,h2,h3{font-family:"Zen Maru Gothic",sans-serif;line-height:1.4;margin:0}
+h1,h2,h3{font-family:"Klee One","Zen Maru Gothic",sans-serif;font-weight:600;line-height:1.45;margin:0;color:var(--brown)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .tag-kari{display:inline-block;font-size:11px;font-weight:700;background:#fff3c4;color:#7a5b00;border:1px dashed #d9b300;border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:middle;line-height:1.7}
 
 /* 写真枠：画像が読み込めないときは枠とラベルだけ表示 */
-.photo{border-radius:28px;background:linear-gradient(135deg,#d6eaf6,#f8e4da);display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.photo{border-radius:28px;background:linear-gradient(135deg,#f6e7cc,#ffe3d6);display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
 .photo span{background:rgba(255,255,255,.75);padding:6px 14px;border-radius:999px}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* header */
-header.site{position:sticky;top:0;z-index:50;background:rgba(248,250,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .logo-img{height:40px;width:auto}
@@ -48,30 +51,37 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(248,250,251,.92);ba
 nav.gnav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 nav.gnav a{text-decoration:none;color:var(--ink);font-size:14px;font-weight:500}
 nav.gnav a:hover{color:var(--main)}
-.tel-btn{display:inline-flex;align-items:center;gap:8px;background:var(--main);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 18px;font-size:15px;white-space:nowrap}
+.tel-btn{display:inline-flex;align-items:center;gap:8px;background:var(--main);color:#fff;text-decoration:none;font-weight:700;border-radius:45px;padding:9px 20px;font-size:15px;white-space:nowrap;font-family:"Josefin Sans","Noto Sans JP",sans-serif;letter-spacing:.04em}
 .tel-btn:hover{background:var(--main-dark)}
 .menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
 
 /* hero */
 .hero{position:relative;overflow:hidden;padding:64px 0 72px}
-.hero::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:var(--tint)}
-.hero::after{content:"";position:absolute;left:-80px;bottom:-140px;width:300px;height:300px;border-radius:50%;background:var(--accent-soft)}
+.hero{background:var(--tint)}
+.hero::before{content:"";position:absolute;right:-140px;top:-160px;width:560px;height:560px;border-radius:50%;background:#fff}
+.hero::after{content:"";position:absolute;left:-60px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:#e9f3d6}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .eyebrow{display:inline-block;color:var(--main-dark);background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:700;margin-bottom:18px}
-.hero h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:.04em}
-.hero h1 em{font-style:normal;color:var(--main)}
+.hero h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:.06em}
+.hero h1 em{font-style:normal;color:var(--main);background:linear-gradient(transparent 68%,#ffe9a8 68%)}
 .hero p.lead{font-size:17px;color:var(--muted);margin:18px 0 28px}
 .hero-points{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
 .hero-points li{background:#fff;border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500;box-shadow:var(--shadow)}
-.hero-points li::before{content:"✓ ";color:var(--main);font-weight:700}
+.hero-points li::before{content:"✓ ";color:var(--leaf);font-weight:700}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 26px;text-decoration:none;font-weight:700}
-.btn-main{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(236,132,102,.35)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:45px;padding:14px 28px;text-decoration:none;font-weight:700}
+.btn::after{content:"›";font-size:1.2em;line-height:1}
+.btn-main{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(232,115,10,.3)}
 .btn-main:hover{filter:brightness(.95)}
 .btn-sub{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .hero-visual{position:relative}
-.hero-visual .photo{aspect-ratio:676/400}
-.hero-visual .photo.sub{position:absolute;right:-18px;top:-34px;width:38%;aspect-ratio:1;border-radius:50%;border:5px solid #fff}
+.hero-visual .photo{aspect-ratio:676/400;border-radius:40px 40px 40px 120px;box-shadow:16px 16px 0 #f6e7cc}
+/* スライドショー：写真がゆっくり切り替わる */
+.slides img{opacity:0;transition:opacity 1.4s ease}
+.slides img.on{opacity:1}
+.dots{position:absolute;right:18px;bottom:14px;display:flex;gap:6px;z-index:1}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6)}
+.dots i.on{background:#fff}
 .hours-card{position:absolute;left:-24px;bottom:-30px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);font-size:13px;line-height:1.6;z-index:2}
 .hours-card b{font-size:15px;color:var(--main-dark)}
 
@@ -85,25 +95,32 @@ nav.gnav a:hover{color:var(--main)}
 
 /* sections */
 section{padding:88px 0}
-.sec-head{text-align:center;margin-bottom:44px}
-.sec-head small{display:block;color:var(--main);font-weight:700;letter-spacing:.2em;font-size:12px;margin-bottom:6px}
-.sec-head h2{font-size:clamp(24px,3.2vw,32px)}
-.sec-head p{color:var(--muted);margin:12px auto 0;max-width:640px}
-.bg-tint{background:var(--tint)}
+/* 見出し：日本語を大きく、英語は下に小さく字間を広げて */
+.sec-head{text-align:center;margin-bottom:48px;display:flex;flex-direction:column;align-items:center}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:.08em}
+.sec-head small{order:2;display:block;font-family:"Josefin Sans",sans-serif;color:#b5a18d;letter-spacing:.3em;font-size:12px;margin-top:6px}
+.sec-head small::before{content:"";display:block;width:36px;height:3px;border-radius:3px;background:var(--main);margin:0 auto 10px}
+.sec-head p{order:3;color:var(--muted);margin:16px auto 0;max-width:640px}
+/* クリーム色の帯：上下をなみなみに */
+.bg-tint{background:var(--tint);position:relative}
+.bg-tint::before,.bg-tint::after{content:"";position:absolute;left:0;right:0;height:36px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 36' preserveAspectRatio='none'%3E%3Cpath d='M0 36C240 4 480 0 720 16s480 20 720-6v26z' fill='%23fcf6ea'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
+.bg-tint::before{top:-35px}
+.bg-tint::after{bottom:-35px;transform:scaleY(-1)}
 
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature{background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.feature .photo{border-radius:0;box-shadow:none;aspect-ratio:16/10;font-size:12px}
-.feature .body{padding:20px 22px 24px}
-.feature .num{font-family:"Zen Maru Gothic";color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.1em}
-.feature h3{font-size:19px;margin:4px 0 8px}
-.feature p{margin:0;color:var(--muted);font-size:15px}
+/* 特徴：写真と文章を左右交互に */
+.features{display:grid;grid-template-columns:1fr;gap:64px;max-width:960px;margin:0 auto}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;align-items:center}
+.feature:nth-child(even) .photo{order:2;box-shadow:-16px 16px 0 #f6e7cc}
+.feature .photo{border-radius:36px;box-shadow:16px 16px 0 #f6e7cc;aspect-ratio:4/3;font-size:12px}
+.feature .num{font-family:"Josefin Sans",sans-serif;color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.2em}
+.feature h3{font-size:clamp(21px,2.4vw,26px);margin:6px 0 12px;letter-spacing:.04em}
+.feature p{margin:0;color:var(--muted);font-size:15.5px}
 
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .service{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 20px;transition:.2s}
 .service:hover{border-color:var(--main);transform:translateY(-2px)}
 .service h3{font-size:18px;display:flex;align-items:center;gap:8px}
-.service h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--main)}
+.service h3::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--leaf)}
 .service p{font-size:14.5px;color:var(--muted);margin:8px 0 0}
 .service .word{background:var(--accent-soft);border-radius:10px;padding:8px 12px;margin-top:10px;font-size:13.5px}
 .service .word b{color:#b5532a}
@@ -129,12 +146,12 @@ section{padding:88px 0}
 .box h3{font-size:19px;margin-bottom:14px}
 .flow{list-style:none;padding:0;margin:0;counter-reset:f}
 .flow li{position:relative;padding:0 0 16px 46px;counter-increment:f}
-.flow li::before{content:counter(f);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--main);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Zen Maru Gothic"}
+.flow li::before{content:counter(f);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--main);color:#fff;display:grid;place-items:center;font-weight:600;font-family:"Josefin Sans"}
 .flow li b{display:block}
 .flow li span{font-size:14px;color:var(--muted)}
 .check{list-style:none;padding:0;margin:0}
 .check li{padding:6px 0 6px 28px;position:relative;border-bottom:1px dashed var(--line)}
-.check li::before{content:"✓";position:absolute;left:4px;color:var(--main);font-weight:700}
+.check li::before{content:"✓";position:absolute;left:4px;color:var(--leaf);font-weight:700}
 .note{font-size:13px;color:var(--muted);margin-top:12px}
 
 .kids{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;background:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow)}
@@ -151,31 +168,36 @@ section{padding:88px 0}
 .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 table.hours{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:15px}
 table.hours th,table.hours td{padding:12px 6px;text-align:center;border-bottom:1px solid var(--line)}
-table.hours thead th{background:var(--main);color:#fff;font-weight:500}
+table.hours thead th{background:var(--brown);color:#fff;font-weight:500}
 table.hours tbody th{text-align:left;padding-left:14px;font-weight:500;white-space:nowrap}
 table.hours .o{color:var(--main);font-weight:700}
-table.hours .x{color:#b9c2c8}
+table.hours .x{color:#cdbca8}
 table.hours .t{color:var(--accent);font-weight:700}
 .info dl{display:grid;grid-template-columns:96px 1fr;gap:10px 12px;margin:20px 0 0;font-size:15px}
 .info dt{font-weight:700;color:var(--main-dark)}
 .info dd{margin:0}
 .access-side{display:grid;gap:16px}
 .access-side .photo{aspect-ratio:1100/496;border-radius:var(--radius)}
-.map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#e7ecef;aspect-ratio:4/3}
+.map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#efe7da;aspect-ratio:4/3}
 .map iframe{width:100%;height:100%;border:0;display:block}
 
-.recruit{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;background:linear-gradient(120deg,var(--main),#35a9e6);color:#fff;border-radius:28px;padding:28px 36px}
+.recruit{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;background:linear-gradient(120deg,var(--main),#ffa88a);color:#fff;border-radius:28px;padding:28px 36px}
+.recruit h2{color:#fff}
 .recruit .photo{width:120px;aspect-ratio:1;border-radius:50%;border:4px solid rgba(255,255,255,.8);box-shadow:none}
 .recruit h2{font-size:24px}
 .recruit p{margin:6px 0 0;opacity:.92}
 .recruit a{background:#fff;color:var(--main-dark)}
 
-footer{background:#1f2e38;color:#cfd9df;padding:48px 0 110px;font-size:14px}
+footer{background:#5b3a1c;color:#f1e5d3;padding:48px 0 110px;font-size:14px}
 .ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer a{color:#fff}
 footer .copy{margin-top:28px;font-size:12px;opacity:.7}
 
 .sp-bar{display:none}
+
+/* スクロールでふわっと表示（JSが動くときだけ） */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
 
 @media (max-width:900px){
   nav.gnav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px 20px}
@@ -187,9 +209,12 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
   .hero{padding:32px 0 64px}
   .hero-grid,.access-grid,.first-grid,.doctors,.kids,.greeting{grid-template-columns:1fr}
   .hero-visual{order:-1;margin:24px 8px 16px}
-  .hero-visual .photo.sub{right:-6px;top:-24px;width:32%}
   .hours-card{position:relative;left:auto;bottom:auto;display:inline-block;margin:-28px 0 0 14px}
-  .features,.services{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr 1fr}
+  .features{grid-template-columns:1fr 1fr;gap:32px 24px}
+  .feature{grid-template-columns:1fr;gap:18px;align-items:start}
+  .feature:nth-child(even) .photo{order:0}
+  .feature .photo,.feature:nth-child(even) .photo{border-radius:24px;box-shadow:10px 10px 0 #f6e7cc}
   .facility{grid-template-columns:1fr 1fr}
   .notice{flex-direction:column;gap:8px;margin-top:0}
   section{padding:64px 0}
@@ -210,8 +235,10 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
   /* ヒーロー：写真の下に診療時間カードを置き、顔に重ならないように */
   .hero{padding:20px 0 40px}
   .hero-visual{margin:20px 0 4px}
-  .hero-visual .photo{border-radius:20px}
-  .hero-visual .photo.sub{width:30%;right:-4px;top:-18px;border-width:4px}
+  .hero-visual .photo{border-radius:24px 24px 24px 64px;box-shadow:10px 10px 0 #f6e7cc}
+  .bg-tint::before,.bg-tint::after{height:20px}
+  .bg-tint::before{top:-19px}
+  .bg-tint::after{bottom:-19px}
   .hours-card{display:block;margin:12px 0 0;padding:12px 16px}
   .hero h1{font-size:28px}
   .hero p.lead{font-size:15px;margin:14px 0 18px}
@@ -228,8 +255,8 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
 
   /* 特徴：写真を左に小さく、文章を右に */
   .features{grid-template-columns:1fr;gap:12px}
-  .feature{display:grid;grid-template-columns:108px 1fr}
-  .feature .photo{aspect-ratio:auto;height:100%;min-height:150px}
+  .feature{grid-template-columns:108px 1fr;gap:0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .feature .photo,.feature:nth-child(even) .photo{aspect-ratio:auto;height:100%;min-height:150px;border-radius:0;box-shadow:none}
   .feature .body{padding:14px 16px}
   .feature .num{font-size:11px}
   .feature h3{font-size:16px;margin:2px 0 6px}
@@ -336,8 +363,12 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="photo"><span>スタッフ集合写真</span><img src="photos/staff.jpg" alt="竹内歯科医院の院長・副院長とスタッフ" onerror="this.remove()"></div>
-      <div class="photo sub"><span>外観</span><img src="photos/main.jpg" alt="竹内歯科医院の外観" onerror="this.remove()"></div>
+      <div class="photo slides" id="slides"><span>スタッフ集合写真</span>
+        <img class="on" src="photos/staff.jpg" alt="竹内歯科医院の院長・副院長とスタッフ" onerror="this.remove()">
+        <img src="photos/main.jpg" alt="竹内歯科医院の外観" onerror="this.remove()">
+        <img src="photos/main2p-2.jpg" alt="診療の様子" onerror="this.remove()">
+        <div class="dots" aria-hidden="true"></div>
+      </div>
       <div class="hours-card">
         <b>本日の診療</b><br>
         <span id="todayHours">9:30〜12:30／14:30〜19:30</span><br>
@@ -670,6 +701,27 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 const d=new Date().getDay(),t=document.getElementById('todayHours');
 if(d===0||d===4)t.textContent='本日は休診日です';
 else if(d===6)t.textContent='9:30〜12:30／14:30〜18:00';
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// トップの写真スライド（5秒ごと）
+const sl=document.getElementById('slides'),dots=sl.querySelector('.dots');
+let imgs=[...sl.querySelectorAll('img')],cur=0;
+window.addEventListener('load',()=>{
+  imgs=[...sl.querySelectorAll('img')];
+  if(imgs.length<2)return;
+  if(!imgs.some(i=>i.classList.contains('on')))imgs[0].classList.add('on');
+  dots.innerHTML=imgs.map((_,i)=>'<i'+(i===0?' class="on"':'')+'></i>').join('');
+  if(still)return;
+  setInterval(()=>{
+    imgs[cur].classList.remove('on');dots.children[cur].classList.remove('on');
+    cur=(cur+1)%imgs.length;
+    imgs[cur].classList.add('on');dots.children[cur].classList.add('on');
+  },5000);
+});
+// スクロールでふわっと表示
+if(!still&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.sec-head,.feature,.service,.doctor,.greeting,.kids,.box,.facility figure,.recruit').forEach(el=>{el.classList.add('fade');io.observe(el)});
+}
 </script>
 </body>
 </html>
