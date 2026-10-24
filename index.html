@@ -195,6 +195,17 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
 
 .sp-bar{display:none}
 
+/* パソコンで電話ボタンを押したときの番号表示 */
+.tel-pop{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(91,58,28,.45);padding:16px}
+.tel-pop.open{display:grid}
+.tel-pop .card{background:#fff;border-radius:24px;padding:32px 36px;text-align:center;max-width:380px;width:100%;box-shadow:var(--shadow)}
+.tel-pop h2{font-size:20px;margin-bottom:6px}
+.tel-pop .num{display:block;font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:36px;color:var(--main);letter-spacing:.04em;text-decoration:none;margin:8px 0}
+.tel-pop p{font-size:13.5px;color:var(--muted);margin:0 0 18px}
+.tel-pop .row{display:flex;gap:10px;justify-content:center}
+.tel-pop button{font:inherit;font-weight:700;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:45px;padding:10px 22px;cursor:pointer}
+.tel-pop button.copy{background:var(--main);border-color:var(--main);color:#fff}
+
 /* スクロールでふわっと表示（JSが動くときだけ） */
 .fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .fade.in{opacity:1;transform:none}
@@ -579,7 +590,7 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
       <div class="box">
         <h3>ご来院の流れ</h3>
         <ol class="flow">
-          <li><b>お電話でご予約</b><span>0567-96-0085 までお電話ください。痛みがある場合もお気軽に。</span></li>
+          <li><b>お電話でご予約</b><span><a href="tel:0567960085">0567-96-0085</a> までお電話ください。痛みがある場合もお気軽に。</span></li>
           <li><b>受付・問診票のご記入</b><span>気になること、ご希望をお聞かせください。</span></li>
           <li><b>検査・カウンセリング</b><span>CT・レントゲン等で確認し、画像を見ながらご説明します。</span></li>
           <li><b>治療・メンテナンス</b><span>ご納得いただいてから治療を始めます。治療後は定期検診へ。</span></li>
@@ -692,6 +703,18 @@ footer .copy{margin-top:28px;font-size:12px;opacity:.7}
   <a href="#access">🕘 診療時間・地図</a>
 </div>
 
+<div class="tel-pop" id="telPop" role="dialog" aria-modal="true" aria-labelledby="telPopTtl">
+  <div class="card">
+    <h2 id="telPopTtl">お電話でのご予約</h2>
+    <a class="num" href="tel:0567960085">0567-96-0085</a>
+    <p>受付：9:30〜12:00／14:30〜19:00（土曜は17:30まで）<br>休診：木・日・祝</p>
+    <div class="row">
+      <button type="button" class="copy" id="telCopy">番号をコピー</button>
+      <button type="button" id="telClose">閉じる</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const btn=document.getElementById('menuBtn'),nav=document.getElementById('gnav');
 btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
@@ -701,6 +724,20 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 const d=new Date().getDay(),t=document.getElementById('todayHours');
 if(d===0||d===4)t.textContent='本日は休診日です';
 else if(d===6)t.textContent='9:30〜12:30／14:30〜18:00';
+// 電話ボタン：スマホはそのまま発信、パソコン（マウス操作）では番号を大きく表示
+const pop=document.getElementById('telPop'),copyBtn=document.getElementById('telCopy');
+const isPC=matchMedia('(hover: hover) and (pointer: fine)').matches;
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',e=>{
+  if(!isPC||pop.contains(a))return;
+  e.preventDefault();pop.classList.add('open');copyBtn.textContent='番号をコピー';copyBtn.focus();
+}));
+const closePop=()=>pop.classList.remove('open');
+document.getElementById('telClose').addEventListener('click',closePop);
+pop.addEventListener('click',e=>{if(e.target===pop)closePop()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePop()});
+copyBtn.addEventListener('click',()=>{
+  navigator.clipboard?.writeText('0567-96-0085').then(()=>copyBtn.textContent='コピーしました',()=>{});
+});
 const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
 // トップの写真スライド（5秒ごと）
 const sl=document.getElementById('slides'),dots=sl.querySelector('.dots');
